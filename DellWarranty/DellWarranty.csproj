@@ -7,7 +7,7 @@
     <DebugType>portable</DebugType>
     <PackageIcon>dell.jpg</PackageIcon>
     <ApplicationIcon>C:\Users\Marcio\OneDrive\Documents\Work\DellWarranty\Assets\Icon\dell.ico</ApplicationIcon>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
