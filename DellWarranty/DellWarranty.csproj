@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>dotnet-DellWarranty-150A3238-D4F4-44EA-94B7-908F96E19DA6</UserSecretsId>
+    <DebugType>portable</DebugType>
+    <PackageIcon>dell.jpg</PackageIcon>
+    <ApplicationIcon>C:\Users\Marcio\OneDrive\Documents\Work\DellWarranty\Assets\Icon\dell.ico</ApplicationIcon>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Assets\Icon\dell.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.0-preview.7.21377.19" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0-preview.7.21377.19" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
+  </ItemGroup>
+</Project>
