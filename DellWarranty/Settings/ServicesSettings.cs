@@ -1,6 +1,4 @@
-﻿using DellWarranty.Services;
-
-namespace DellWarranty.Settings;
+﻿namespace DellWarranty.Settings;
 public class ServicesSettings
 {
     public static IServiceProvider GetServices(IConfiguration configuration)

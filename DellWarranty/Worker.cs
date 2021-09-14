@@ -1,6 +1,6 @@
-using DellWarranty.Models;
-using DellWarranty.Services;
-using DellWarranty.Settings;
+global using DellWarranty.Models;
+global using DellWarranty.Services;
+global using DellWarranty.Settings;
 using System.Reflection;
 
 namespace DellWarranty;

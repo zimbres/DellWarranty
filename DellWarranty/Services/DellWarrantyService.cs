@@ -1,6 +1,4 @@
-﻿using DellWarranty.Models;
-using DellWarranty.Settings;
-using RestSharp;
+﻿using RestSharp;
 
 namespace DellWarranty.Services;
 public class DellWarrantyService
