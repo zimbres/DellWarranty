@@ -1,5 +1,5 @@
 ﻿namespace DellWarranty.Services;
-public class ExportToFileService
+public static class ExportToFileService
 {
     public static void Export(List<DellWarrantyPayload> result)
     {

@@ -1,13 +1,13 @@
+using System.Text;
+
 namespace DellWarranty;
 
 public class Worker
 {
-    private readonly ILogger<Worker> _logger;
     private readonly DellWarrantyService _warrantyService;
 
-    public Worker(ILogger<Worker> logger, DellWarrantyService warrantyService)
+    public Worker(DellWarrantyService warrantyService)
     {
-        _logger = logger;
         _warrantyService = warrantyService;
     }
 
@@ -18,7 +18,7 @@ public class Worker
         Console.Write("Type 1 for manually enter Service Tags or 2 for load it from a file: ");
         var input = Console.ReadLine();
 
-        if (input != "1" & input != "2")
+        if (input != "1" && input != "2")
         {
             Console.WriteLine("You must choice '1' or '2'!");
             Console.WriteLine("Press ENTER to exit.");
@@ -69,20 +69,20 @@ public class Worker
         Console.Write("Processing..");
 
         var result = new List<DellWarrantyPayload>();
-        var tagList = string.Empty;
+        StringBuilder tagList = new();
         var lenght = 99;
         for (int i = 0; i < tags.Length; i++)
         {
             foreach (var tag in tags.Skip(i).Take(lenght))
             {
-                tagList += tag + ",";
+                tagList.Append(tag + ",");
             }
             i += (lenght - 1);
 
-            var serviceTags = tagList.Remove(tagList.Length - 1, 1);
+            var serviceTags = tagList.Remove(tagList.Length - 1, 1).ToString();
             result.AddRange(await _warrantyService.GetDellWarranty(serviceTags));
 
-            tagList = string.Empty;
+            tagList.Clear();
 
             Console.Write(".");
         }
