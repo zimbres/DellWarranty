@@ -25,7 +25,6 @@ public class Worker
             Console.ReadLine();
             return;
         }
-
         var choice = int.Parse(input);
 
         var tags = Array.Empty<string>();
@@ -44,7 +43,7 @@ public class Worker
                 tags = Console.ReadLine().Replace(" ", "").Split(",");
             }
         }
-        else if (choice == 2)
+        if (choice == 2)
         {
             Console.WriteLine("File must be named as tags.txt with one Service Tag per line!");
             Console.WriteLine("Press ENTER to continue!");
@@ -61,11 +60,7 @@ public class Worker
                 return;
             }
         }
-        else
-        {
-            Console.WriteLine("Invalid input");
-        }
-
+    
         Console.Write("Processing..");
 
         var result = new List<DellWarrantyPayload>();
