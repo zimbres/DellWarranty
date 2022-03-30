@@ -3,3 +3,15 @@
 # DellWarranty
 Console application written C# to retrieve warranty data from Dell Api in batch
 
+---
+
+Information about Dell Api need to be filled in appsettings.json. This data can be obtained at Dell TechDirect or with the TAM.
+
+ ```
+ "ApiSettings": {
+    "ClientId": "",
+    "ClientSecret": "",
+    "AuthUrl": "",
+    "EndpointUrl": ""
+  }
+  ```
