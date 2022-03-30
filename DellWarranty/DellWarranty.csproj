@@ -15,6 +15,7 @@
     <None Include="..\Assets\Icon\dell.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
