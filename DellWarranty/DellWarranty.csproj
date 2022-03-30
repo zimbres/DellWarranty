@@ -6,7 +6,7 @@
     <UserSecretsId>dotnet-DellWarranty-150A3238-D4F4-44EA-94B7-908F96E19DA6</UserSecretsId>
     <DebugType>portable</DebugType>
     <PackageIcon>dell.jpg</PackageIcon>
-    <ApplicationIcon>C:\Users\Marcio\OneDrive\Documents\Work\DellWarranty\Assets\Icon\dell.ico</ApplicationIcon>
+    <ApplicationIcon>..\Assets\Icon\dell.ico</ApplicationIcon>
     <AssemblyVersion>2.0.0.1</AssemblyVersion>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -15,7 +15,7 @@
     <None Include="..\Assets\Icon\dell.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
