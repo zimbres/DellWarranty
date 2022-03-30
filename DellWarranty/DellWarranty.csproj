@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <UserSecretsId>dotnet-DellWarranty-150A3238-D4F4-44EA-94B7-908F96E19DA6</UserSecretsId>
     <DebugType>portable</DebugType>
     <PackageIcon>dell.jpg</PackageIcon>
