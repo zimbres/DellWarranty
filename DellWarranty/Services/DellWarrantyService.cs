@@ -16,11 +16,11 @@ public class DellWarrantyService
 
         var auth = await GetDellOAuth(apiSettings);
 
-		var client = new RestClient($"{apiSettings.EndpointUrl}{serviceTags}")
-		{
-			Timeout = 60000
-		};
-		var request = new RestRequest(Method.GET);
+        var client = new RestClient($"{apiSettings.EndpointUrl}{serviceTags}")
+        {
+            Timeout = 60000
+        };
+        var request = new RestRequest(Method.GET);
         request.AddHeader("Accept", "application/json");
         request.AddHeader("Authorization", $"Bearer {auth.AccessToken}");
         var response = await client.GetAsync<List<DellWarrantyPayload>>(request);
@@ -30,10 +30,10 @@ public class DellWarrantyService
     private static async Task<DellOAuthPayload> GetDellOAuth(ApiSettings apiSettings)
     {
         var client = new RestClient(apiSettings.AuthUrl)
-		{
-			Timeout = 60000
+        {
+            Timeout = 60000
         };
-		var request = new RestRequest(Method.POST);
+        var request = new RestRequest(Method.POST);
         request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
         request.AddParameter("client_id", $"{apiSettings.ClientId}");
         request.AddParameter("client_secret", $"{apiSettings.ClientSecret}");

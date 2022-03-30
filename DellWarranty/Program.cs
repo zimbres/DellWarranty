@@ -1,17 +1,9 @@
-namespace DellWarranty;
-
-public class Program
-{
-    public static async Task Main(string[] args)
+IHost host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices(services =>
     {
-        var host = CreateHostBuilder(args).Build();
-        await host.Services.GetRequiredService<Worker>().ExecuteAsync();
-    }
+        services.AddSingleton<DellWarrantyService>();
+        services.AddSingleton<Worker>();
+    })
+    .Build();
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureServices((hostContext, services) =>
-            {
-                services.AddSingleton<Worker>();
-            });
-}
+await host.Services.GetRequiredService<Worker>().ExecuteAsync();

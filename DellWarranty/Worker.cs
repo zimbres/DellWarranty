@@ -1,27 +1,19 @@
-global using DellWarranty.Models;
-global using DellWarranty.Services;
-global using DellWarranty.Settings;
-using System.Reflection;
-
 namespace DellWarranty;
 
 public class Worker
 {
     private readonly ILogger<Worker> _logger;
-    private readonly IConfiguration _configuration;
+    private readonly DellWarrantyService _warrantyService;
 
-    public Worker(IConfiguration configuration, ILogger<Worker> logger)
+    public Worker(ILogger<Worker> logger, DellWarrantyService warrantyService)
     {
         _logger = logger;
-        _configuration = configuration;
+        _warrantyService = warrantyService;
     }
 
     public async Task ExecuteAsync()
     {
         Console.WriteLine($"Software version: {Assembly.GetExecutingAssembly().GetName().Version}");
-
-        var serviceProvider = ServicesSettings.GetServices(_configuration);
-        var dellWarrantyService = serviceProvider.GetService<DellWarrantyService>();
 
         Console.Write("Type 1 for manually enter Service Tags or 2 for load it from a file: ");
         var input = Console.ReadLine();
@@ -88,7 +80,7 @@ public class Worker
             i += (lenght - 1);
 
             var serviceTags = tagList.Remove(tagList.Length - 1, 1);
-            result.AddRange(await dellWarrantyService.GetDellWarranty(serviceTags));
+            result.AddRange(await _warrantyService.GetDellWarranty(serviceTags));
 
             tagList = string.Empty;
 
