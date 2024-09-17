@@ -11,6 +11,9 @@
 *.sln.docstates
 tags.txt
 results.csv
+devices.csv
+entitlements.csv
+.sonarqube
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
