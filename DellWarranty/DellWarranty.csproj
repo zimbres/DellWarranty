@@ -7,8 +7,10 @@
     <DebugType>portable</DebugType>
     <PackageIcon>dell.jpg</PackageIcon>
     <ApplicationIcon>..\Assets\Icon\dell.ico</ApplicationIcon>
-    <AssemblyVersion>2.0.0.1</AssemblyVersion>
+    <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <ImplicitUsings>enable</ImplicitUsings>
+    <FileVersion>$(PackageVersion)</FileVersion>
+    <Version>3.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

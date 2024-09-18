@@ -7,13 +7,13 @@ public partial class DellWarrantyPayload
     public long Id { get; set; }
 
     [JsonPropertyName("serviceTag")]
-    public string ServiceTag { get; set; }
+    public string ServiceTag { get; set; } = string.Empty;
 
     [JsonPropertyName("orderBuid")]
     public long OrderBuid { get; set; }
 
     [JsonPropertyName("shipDate")]
-    public DateTimeOffset ShipDate { get; set; }
+    public DateTimeOffset ShipDate { get; set; } = default;
 
     [JsonPropertyName("productCode")]
     public string ProductCode { get; set; }
@@ -25,7 +25,7 @@ public partial class DellWarrantyPayload
     public string ProductId { get; set; }
 
     [JsonPropertyName("productLineDescription")]
-    public string ProductLineDescription { get; set; }
+    public string ProductLineDescription { get; set; } = string.Empty;
 
     [JsonPropertyName("productFamily")]
     public string ProductFamily { get; set; }
@@ -37,7 +37,7 @@ public partial class DellWarrantyPayload
     public string ProductLobDescription { get; set; }
 
     [JsonPropertyName("countryCode")]
-    public string CountryCode { get; set; }
+    public string CountryCode { get; set; } = string.Empty;
 
     [JsonPropertyName("duplicated")]
     public bool Duplicated { get; set; }
